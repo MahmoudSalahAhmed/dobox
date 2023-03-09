@@ -1,0 +1,56 @@
+@import "base/index";
+
+@for $i from 8 to 96 {
+    @if $i %2==0 {
+        .rect-#{$i} {
+            width: #{$i}px;
+            height: #{$i}px;
+        }
+    }
+}
+
+@for $i from 2 to 16 {
+    @if $i %2==0 {
+        .radius-#{$i} {
+            width: #{$i}px;
+            height: #{$i}px;
+        }
+    }
+}
+
+.circle {
+    border-radius: 50%;
+}
+.pointer {
+    cursor: pointer;
+    user-select: none;
+}
+
+.flex-colomn {
+    flex-direction: column;
+}
+
+.remain-h {
+    flex: 1 1 auto;
+}
+
+.remain-w {
+    flex: 1 1 auto;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+.scroll-x {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.scroll-y {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.lh-1 {
+    line-height: 1;
+}

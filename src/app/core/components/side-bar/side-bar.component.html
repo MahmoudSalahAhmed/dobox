@@ -1,0 +1,13 @@
+<div class="side-menu relative no-print" (mouseenter)="enterORLeaveSideBar(true)"
+  (mouseleave)="enterORLeaveSideBar(false)">
+  <ul class="side-list d-flex flex-column accordion" id="accordionExample">
+    <li class="nav-item" *ngFor="let item of appList" [ngClass]="{ active: getCurrentMoudleName() == item.Url }" >
+      <a class="nav-link" routerLink="/product">
+        <img src="../../../../assets/icon/{{item.Icon}}.png" alt="" class="nav-img">
+        <p class="nav-content">
+          {{item.Name|translate}}
+        </p>
+      </a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,33 @@
+
+
+<div class="main-panel" [class.side-opened]="closeSideBar || enterSideBar">
+  <!-- <loading *ngIf="!page.isLoaded" title="{{'shared.loading'|translate}}" [inline]="false"
+    desc="{{'shared.loading-describ'|translate}}"></loading> -->
+  <ng-container *ngIf="page.isLoaded">
+    <div class="nav-bar navbar-light fixed-top no-print">
+      <div class="container-fluid d-flex align-items-center p-3">
+        <div class="d-flex align-items-center w-100">
+          <div>
+            <img src="assets/icon/align-justify.svg" class="rect-24 pointer d-sm-none me-3"
+              (click)="closeOrOpenSideBar(!closeSideBar)">
+          </div>
+          <div class="d-flex align-items-center">
+            <img src="/assets/icon/hub.svg" alt="logo" class="logo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <side-bar [appList]="hupAppList" (closeOrOpenSideBar)="closeOrOpenSideBar($event)" (enterLeaveSideBar)="enterLeaveSideBar($event)">
+    </side-bar>
+    <div class="main-page" (click)="closeOrOpenSideBar(false)">
+      <div class="d-flex py-2">
+        <div class="mx-2">
+          <hub-app-list [appList]="hupAppList" [currentApp]="currentApp"></hub-app-list>
+        </div>
+        <div class="remain-w">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

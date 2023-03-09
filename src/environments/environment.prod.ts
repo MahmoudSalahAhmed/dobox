@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  pageSize:50,
+  production: true,
+  api:"",
 };

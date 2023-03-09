@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Light";
+  font-display: swap;
+  src: url("/assets/font/stc/light/STCForward-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Regular";
+  font-display: swap;
+  src: url("/assets/font/stc/regular/STCForward-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Bold";
+  font-display: swap;
+  src: url("/assets/font/stc/bold/STCForward-Bold.ttf") format("truetype");
+}
+
+$font-light: "Light", sans-serif;
+$font-regular: "Regular", sans-serif;
+$font-bold: "Bold", sans-serif;
+
+h1,h2,h3,h4,h5,h6 {
+  &:not(.regular) {
+    font-family: $font-bold;
+  }
+  &.regular {
+    font-family: $font-regular;
+  }
+}
+
+.ff-bold {
+  font-family: $font-bold;
+}
+.fw-bold {
+  font-weight: bold;
+}
+.ff-normal {
+  font-family: $font-regular;
+}
+
+@for $i from 8 to 48 {
+  @if $i %2 == 0 {
+    .font-#{$i} {
+      font-size: #{$i}px;
+    }
+  }
+}

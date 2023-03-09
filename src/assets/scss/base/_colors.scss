@@ -1,0 +1,49 @@
+$purple: #4F008C;
+$purple-dark: #3B0F66;
+$coral: #FF375E;
+$silver: #8E9AA0;
+$sun-light: #FFDD40;
+$oasis-light: #FF6A39;
+$sunset-light: #00C48C;
+$sea-light: #1BCED8;
+$moon-light: #A54EE1;
+$onyx: #1D252D;
+$gray: #F3F3F3;
+
+$colors: (
+    "purple": $purple,
+    "purple-dark": $purple-dark,
+    "coral": $coral,
+    "silver": $silver,
+    "sun-light": $sun-light,
+    "oasis-light": $oasis-light,
+    "sunset-light": $sunset-light,
+    "sea-light": $sea-light,
+    "moon-light": $moon-light,
+    "onyx": $onyx,
+    "gray": $gray
+);
+
+
+
+@mixin background-generate ($hex) {
+    background-color: $hex;
+}
+@mixin border-generate ($hex) {
+    border-color: $hex;
+}
+@mixin color-generate ($hex) {
+    color: $hex;
+}
+
+@each $name, $hex in $colors {
+    .bg-#{$name} {
+        @include background-generate($hex)
+    }
+    .bc-#{$name} {
+        @include border-generate($hex)
+    }
+    .c-#{$name} {
+        @include color-generate($hex)
+    }
+}

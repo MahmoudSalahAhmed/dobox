@@ -1,0 +1,66 @@
+@import "/src/assets//scss/base/colors";
+.side-menu {
+  position: absolute;
+  width: auto;
+  top: 62px;
+  bottom: 0;
+  left: 0;
+  width: 62px;
+  background-color: $purple;
+  display: flex;
+  flex-direction: column;
+  z-index: 1031;
+  transition: all .15s ease-in-out;
+}
+.menu-bar{
+  position: absolute;
+  right: -100%;
+  color: #000;
+  top: 0;
+}
+.side-menu .side-list {
+  height: 100vh;
+  padding-block: 8px;
+  overflow: overlay !important;
+  overflow-x: hidden !important;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: unset;
+  margin-bottom: 0;
+}
+.side-menu .nav-item {
+  font-size: 20px;
+  padding: 12px;
+  padding-inline-start: 18px;
+  margin-block: 2px;
+  cursor: pointer;
+  user-select: none;
+  border-inline-start: 3px solid transparent;
+}
+.side-menu .nav-item.active,
+.side-menu .nav-item:hover,
+.side-menu .nav-item:focus{
+  background-color: $purple-dark;
+}
+.side-menu .nav-item.active {
+  border-color: $coral;
+}
+.side-menu .nav-link {
+  padding: unset;
+}
+.nav-img{
+  width: 20px;
+  height: 20px;
+}
+.side-menu .nav-item .nav-link {
+  color: #ffffff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  transition: color 0.15s ease-in, background-color 0.15s ease-in,
+  border-color 0.15s ease-i;
+  font-size: 14px;
+}
