@@ -12,6 +12,7 @@ const routes: Routes = [
     path: '',
     component: PlatformComponent,
     children: [
+      { path: '', redirectTo: 'kanban', pathMatch: 'full' },
       { path: 'kanban', component: KanbanComponent },
       { path: 'main-table', component: MainTableComponent },
       { path: 'dashboard', component: DashboardComponent },
