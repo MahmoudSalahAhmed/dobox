@@ -108,8 +108,7 @@ button:active,
 img {
     outline: unset;
 }
-
-p {
+.mat-body p, .mat-body-1 p, .mat-typography p, p {
     margin-bottom: 0;
 }
 
@@ -122,3 +121,5 @@ hr {
     background-color: #e6e7e8;
     opacity: 1 !important;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
