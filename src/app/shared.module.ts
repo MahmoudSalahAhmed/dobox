@@ -36,6 +36,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient]
       }, isolate: true
     }),
+    
   ],
   providers: [AuthGuardService, DatePipe],
   exports: [
