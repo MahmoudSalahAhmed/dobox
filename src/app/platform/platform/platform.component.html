@@ -9,23 +9,14 @@
     </div>
     <div class="d-flex mt-4">
       <div class="tab-list">
-        <a routerLink="/platform/kanban">
-          <div class="tab active me-2">
-            <p>Kanban</p>
-          </div>
-        </a>
-        <div class="tab-divider me-2"></div>
-        <a routerLink="/platform/main-table">
-          <div class="tab me-2">
-            <p>Main Table</p>
-          </div>
-        </a>
-        <div class="tab-divider me-2"></div>
-        <a routerLink="/platform/dashboard">
-          <div class="tab">
-            <p>Dashboard</p>
-          </div>
-        </a>
+        <ng-container *ngFor="let item of tabList; let last=last">
+          <a routerLink="{{item.Url}}">
+            <div class="tab active" [ngClass]="{'me-2': !last,'active': getCurrentRoute() == item.Url}">
+              <p>{{('platform.'+item.Name)|translate}}</p>
+            </div>
+          </a>
+          <div class="tab-divider me-2" *ngIf="!last"></div>
+        </ng-container>
       </div>
     </div>
   </div>

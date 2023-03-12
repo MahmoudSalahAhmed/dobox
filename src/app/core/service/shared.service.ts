@@ -37,6 +37,9 @@ export class SharedService {
   getCurrentMoudleName(): string {
     return this.router.url.split('?')[0].split('/')[1];
   }
+  getCurrentRoute(): string {
+    return this.router.url.split('?')[0];
+  }
   getCurrenPageName(): string {
     return this.router.url.split('?')[0].split('/')[2]?.split('?')[0]
   }

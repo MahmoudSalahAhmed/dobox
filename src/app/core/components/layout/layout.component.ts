@@ -19,7 +19,7 @@ export class LayoutComponent implements OnInit {
   currentApp:HubAppEnum = HubAppEnum.DOBOX
   hupAppList: SelectItem[] = [
     { ID: HubAppEnum.CHAT, Name: "Chat", Url: 'chat', Icon: 'chat' },
-    { ID: HubAppEnum.DOBOX, Name: "Dobox", Url: '', Icon: 'dobox'}
+    { ID: HubAppEnum.DOBOX, Name: "Dobox", Url: 'platform', Icon: 'dobox'}
   ]
   languageList: SelectItem[] = [
     { ID: LanguageTypeEnum.EN, Name: "English", Url: 'en', Selected: false },
