@@ -2,5 +2,32 @@
 
 .card {
   width: 300px;
-  padding: 16px 12px;
+  padding-block: 16px;
+}
+.platform-item,
+.platform-header,
+.workspace {
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.workspace {
+  margin-top: 36px;
+  padding: 12px 8px;
+}
+.platforms {
+  padding-inline: 16px;
+}
+.platform-header {
+  padding: 10px;
+}
+.platform-body {
+  padding: 12px 16px; 
+}
+.platform-item {
+  padding: 6px;
+}
+hr {
+  margin-block: 30px;
 }

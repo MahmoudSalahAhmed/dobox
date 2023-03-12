@@ -6,7 +6,39 @@
   </ul>
 </div> -->
 <div class="card ">
-  <p class="font-34 c-purple mt-3">Dobox</p>
+  <div class="px-3 pt-2">
+    <p class="font-34 c-purple mt-4">Dobox</p>
+    <div class="workspace bg-gray">
+      <div class="rect-36 bg-white radius-4 d-flex">
+        <p class="font-16 c-purple ff-regular m-auto">G</p>
+      </div>
+      <p class="font-16 c-purple ff-regular mx-3">GCEO Workspaces</p>
+      <span class="material-icons c-onyx ms-auto">expand_more</span>
+    </div>
+  </div>
+  <hr>
+  <div class="d-flex align-items-center px-4">
+    <span class="material-icons font-16 c-onyx">poll</span>
+    <p class="font-16 c-onyx ms-2">{{'platform.main-dashboard'|translate}}</p>
+  </div>
+  <hr>
+  <div class="platforms">
+    <div class="platform-header bg-purple">
+        <span class="material-icons font-40 c-moon-light"> widgets </span>
+      <p class="font-16 c-white ms-4">{{'platform.platforms'|translate}}</p>
+      <div class="rect-40 bg-moon-light radius-4 d-flex ms-auto pointer">
+        <span class="material-icons font-16 c-white m-auto"> add </span>
+      </div>
+    </div>
+    <div class="platform-body bg-gray radius-4 mt-3">
+      <div class="platform-item" *ngFor="let item of appList" [class.bg-silver-light]="item.Name == 'HUB Road Map'">
+        <div class="rect-32 bg-white radius-4 d-flex">
+          <p class="font-12 c-onyx ff-regular m-auto">{{item.Name.charAt(0)}}</p>
+        </div>
+        <p class="font-16 ff-regular ms-3" [class]="item.Name == 'HUB Road Map'?'c-purple':'c-onyx'">{{item.Name}}</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- <ng-template #navLink let-icon="icon" let-text="text" let-url="url">

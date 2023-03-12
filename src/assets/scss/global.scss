@@ -12,8 +12,7 @@
 @for $i from 2 to 16 {
     @if $i %2==0 {
         .radius-#{$i} {
-            width: #{$i}px;
-            height: #{$i}px;
+            border-radius: #{$i}px;
         }
     }
 }
